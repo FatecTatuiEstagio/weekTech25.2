@@ -20,9 +20,9 @@ const Navbar = () => {
           {/* Logos */}
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center">
+              {/* <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">ST</span>
-              </div>
+              </div> */}
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold text-slate-900">Semana de Tecnologia</h1>
                 <p className="text-sm text-slate-600">Fatec Tatuí</p>
@@ -31,12 +31,12 @@ const Navbar = () => {
             
             {/* Logos institucionais */}
             <div className="hidden md:flex items-center space-x-4">
-              <div className="w-10 h-10 bg-red-600 rounded flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-red-600 rounded flex items-center justify-center">
                 <span className="text-white font-bold text-sm">FATEC</span>
               </div>
               <div className="w-10 h-10 bg-blue-800 rounded flex items-center justify-center">
                 <span className="text-white font-bold text-xs">CPS</span>
-              </div>
+              </div> */}
             </div>
           </div>
 

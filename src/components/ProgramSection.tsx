@@ -1,45 +1,30 @@
 
-import React, { useState } from 'react';
 import { Calendar, Clock, MapPin, User } from 'lucide-react';
+import { useState } from 'react';
 
 const ProgramSection = () => {
   const [selectedDay, setSelectedDay] = useState('segunda');
 
   const programData = {
     segunda: {
-      date: "Segunda-feira - 13/10",
+      // date: "Segunda-feira - 13/10",
+      date: " - ",
       activities: [
         {
-          time: "19:00 - 20:30",
-          title: "Abertura da Semana de Tecnologia",
-          speaker: "Direção da Fatec Tatuí",
-          speakerInfo: "Equipe de direção e coordenação",
-          location: "Auditório Principal",
-          image: "/placeholder.svg"
-        },
-        {
-          time: "20:30 - 22:00",
-          title: "Inteligência Artificial: O Futuro é Agora",
-          speaker: "Dr. Maria Silva",
-          speakerInfo: "PhD em IA pela USP, Pesquisadora no Google",
-          location: "Auditório Principal",
-          image: "/placeholder.svg"
+          time: "19:00 - 22:00",
+          title: "Em breve mais informações",
+          speaker: "",
+          speakerInfo: "",
+          location: "",
+          image: ""
         }
       ]
     },
     terca: {
-      date: "Terça-feira - 14/10",
+      date: " - ",
       activities: [
         {
-          time: "19:00 - 20:30",
-          title: "Desenvolvimento Web Moderno",
-          speaker: "João Santos",
-          speakerInfo: "Senior Developer na Microsoft, 10+ anos de experiência",
-          location: "Lab de Informática 1",
-          image: "/placeholder.svg"
-        },
-        {
-          time: "20:30 - 22:00",
+          time: "19:00 - 22:00",
           title: "Em breve mais informações",
           speaker: "",
           speakerInfo: "",
@@ -49,7 +34,7 @@ const ProgramSection = () => {
       ]
     },
     quarta: {
-      date: "Quarta-feira - 15/10",
+      date: " - ",
       activities: [
         {
           time: "19:00 - 22:00",
@@ -62,18 +47,10 @@ const ProgramSection = () => {
       ]
     },
     quinta: {
-      date: "Quinta-feira - 16/10",
+      date: " - ",
       activities: [
         {
-          time: "19:00 - 20:30",
-          title: "Cybersecurity e Proteção de Dados",
-          speaker: "Ana Costa",
-          speakerInfo: "Especialista em Segurança, CISSP, Consultora independente",
-          location: "Auditório Principal",
-          image: "/placeholder.svg"
-        },
-        {
-          time: "20:30 - 22:00",
+          time: "19:00 - 22:00",
           title: "Em breve mais informações",
           speaker: "",
           speakerInfo: "",
@@ -83,7 +60,7 @@ const ProgramSection = () => {
       ]
     },
     sexta: {
-      date: "Sexta-feira - 17/10",
+      date: " - ",
       activities: [
         {
           time: "19:00 - 22:00",

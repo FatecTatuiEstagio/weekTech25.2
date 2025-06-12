@@ -35,7 +35,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            O maior evento de tecnologia e inovação da Fatec Tatuí. 
+            Evento de tecnologia e inovação da Fatec Tatuí. 
             Conectando estudantes, profissionais e empresas em uma semana de aprendizado e networking.
           </p>
         </div>
@@ -57,7 +57,7 @@ const HeroSection = () => {
         </div>
 
         {/* Estatísticas do evento */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        {/* <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-3xl sm:text-4xl font-bold text-white mb-2">5</div>
             <div className="text-blue-200">Dias de Evento</div>
@@ -70,7 +70,7 @@ const HeroSection = () => {
             <div className="text-3xl sm:text-4xl font-bold text-white mb-2">500+</div>
             <div className="text-blue-200">Participantes</div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Elemento decorativo */}

@@ -1,6 +1,5 @@
 
-import React from 'react';
-import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,9 +9,9 @@ const Footer = () => {
           {/* Informações da Instituição */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+              {/* <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">ST</span>
-              </div>
+              </div> */}
               <div>
                 <h3 className="text-xl font-bold">Semana de Tecnologia</h3>
                 <p className="text-slate-300">Fatec Tatuí</p>
@@ -26,14 +25,14 @@ const Footer = () => {
             </p>
 
             {/* Logos institucionais */}
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <div className="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">FATEC</span>
               </div>
               <div className="w-16 h-16 bg-blue-800 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">CPS</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contato */}

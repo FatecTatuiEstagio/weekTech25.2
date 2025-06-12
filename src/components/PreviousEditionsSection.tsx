@@ -8,32 +8,14 @@ const PreviousEditionsSection = () => {
       year: "2024",
       title: "Semana de Tecnologia 2024",
       description: "Focada em Inteligência Artificial e Machine Learning, reuniu mais de 400 participantes.",
-      participants: "400+",
-      days: "5",
-      talks: "18",
       image: "/placeholder.svg",
-      highlights: ["IA Generativa", "ML na Prática", "Ética em IA"]
     },
     {
       year: "2023", 
       title: "Semana de Tecnologia 2023",
       description: "Abordou temas sobre Cloud Computing e DevOps, com participação de grandes empresas.",
-      participants: "350+",
-      days: "5", 
-      talks: "15",
       image: "/placeholder.svg",
-      highlights: ["AWS", "Docker", "Kubernetes"]
     },
-    {
-      year: "2022",
-      title: "Semana de Tecnologia 2022", 
-      description: "Primeiro evento pós-pandemia, híbrido, discutindo o futuro do trabalho remoto.",
-      participants: "300+",
-      days: "4",
-      talks: "12",
-      image: "/placeholder.svg",
-      highlights: ["Trabalho Remoto", "Ferramentas Colaborativas", "Segurança Digital"]
-    }
   ];
 
   return (
@@ -71,46 +53,6 @@ const PreviousEditionsSection = () => {
                 <p className="text-slate-600 mb-6 leading-relaxed">
                   {edition.description}
                 </p>
-
-                {/* Estatísticas */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      <Users className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div className="text-lg font-bold text-slate-900">{edition.participants}</div>
-                    <div className="text-xs text-slate-500">Participantes</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      <Calendar className="w-5 h-5 text-green-600" />
-                    </div>
-                    <div className="text-lg font-bold text-slate-900">{edition.days}</div>
-                    <div className="text-xs text-slate-500">Dias</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      <Award className="w-5 h-5 text-orange-600" />
-                    </div>
-                    <div className="text-lg font-bold text-slate-900">{edition.talks}</div>
-                    <div className="text-xs text-slate-500">Palestras</div>
-                  </div>
-                </div>
-
-                {/* Destaques */}
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-700 mb-3">Destaques:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {edition.highlights.map((highlight, idx) => (
-                      <span
-                        key={idx}
-                        className="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded-md"
-                      >
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           ))}

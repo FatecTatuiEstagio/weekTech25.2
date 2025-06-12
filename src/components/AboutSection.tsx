@@ -41,7 +41,7 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold text-slate-900 mb-6">
               Organizado pela Fatec Tatuí e Centro Paula Souza
             </h3>
@@ -63,9 +63,9 @@ const AboutSection = () => {
                 <span className="text-white font-bold text-sm">CPS</span>
               </div>
             </div>
-          </div>
+          </div> */}
           
-          <div className="relative">
+          {/* <div className="relative">
             <div className="tech-card p-8">
               <h4 className="text-xl font-bold text-slate-900 mb-4">Público-Alvo</h4>
               <ul className="space-y-3 text-slate-600">
@@ -87,7 +87,7 @@ const AboutSection = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
