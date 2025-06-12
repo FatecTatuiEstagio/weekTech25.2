@@ -1,20 +1,18 @@
-
-import React from 'react';
-import { Users, Calendar, Award } from 'lucide-react';
-
 const PreviousEditionsSection = () => {
   const editions = [
     {
-      year: "2024",
-      title: "Semana de Tecnologia 2024",
+      year: "2025",
+      title: "Semana de Tecnologia 2025",
       description: "Focada em Inteligência Artificial e Machine Learning, reuniu mais de 400 participantes.",
-      image: "/placeholder.svg",
+      image: "/editions/2025-1.png",
+      link: "https://week-tech2025.vercel.app/"
     },
     {
-      year: "2023", 
-      title: "Semana de Tecnologia 2023",
+      year: "2024", 
+      title: "Semana de Tecnologia 2024",
       description: "Abordou temas sobre Cloud Computing e DevOps, com participação de grandes empresas.",
-      image: "/placeholder.svg",
+      image: "/editions/2024-2.png",
+      link: "https://week-tech.vercel.app/"
     },
   ];
 
@@ -35,12 +33,16 @@ const PreviousEditionsSection = () => {
           {editions.map((edition, index) => (
             <div key={index} className="tech-card overflow-hidden tech-hover-effect">
               {/* Imagem placeholder */}
-              <div className="h-48 bg-slate-200 flex items-center justify-center">
+              <a href={edition.link} target="_blank">
+                <div className="bg-slate-200 flex items-center justify-center">
                 <div className="text-center">
-                  <Calendar className="w-12 h-12 text-slate-400 mx-auto mb-2" />
-                  <span className="text-2xl font-bold text-slate-500">{edition.year}</span>
+                  <img className='w-full' src={edition.image} alt={`Imagem da ${edition.title}`} />
+                  {/* <Calendar className="w-12 h-12 text-slate-400 mx-auto mb-2" /> */}
+                  {/* <span className="text-2xl font-bold text-slate-500">{edition.year}</span> */}
                 </div>
-              </div>
+              </div>                
+              </a>
+              
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
