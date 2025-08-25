@@ -25,7 +25,6 @@ const PreviousEditionsSection = () => {
           <h2 className="text-4xl font-bold text-slate-900 mb-6">
             Edições <span className="tech-text-gradient">Anteriores</span>
           </h2>
-
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Relembre as edições anteriores da Semana de Tecnologia e veja como o
             evento tem crescido e evoluído ao longo dos anos.
