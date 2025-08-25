@@ -17,7 +17,15 @@ const ProgramSection = () => {
           speakerInfo: "",
           location: "",
           image: ""
-        }
+        },
+        {
+          time: "19:00 - 22:00",
+          title: "Em breve mais informações",
+          speaker: "",
+          speakerInfo: "",
+          location: "",
+          image: ""
+        },
       ]
     },
     terca: {
@@ -99,6 +107,7 @@ const ProgramSection = () => {
         <div className="flex flex-wrap justify-center mb-12 bg-white rounded-lg p-2 shadow-md max-w-2xl mx-auto">
           {days.map((day) => (
             <button
+              type='button'
               key={day.key}
               onClick={() => setSelectedDay(day.key)}
               className={`px-4 py-3 rounded-md font-medium transition-all duration-200 ${
@@ -123,7 +132,7 @@ const ProgramSection = () => {
 
           <div className="space-y-6">
             {programData[selectedDay].activities.map((activity, index) => (
-              <div key={index} className="tech-card p-6">
+              <div key={index.toString()} className="tech-card p-6">
                 {activity.speaker ? (
                   <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
                     <div className="lg:col-span-1">
