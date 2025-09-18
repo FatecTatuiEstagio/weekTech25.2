@@ -24,10 +24,10 @@ const ProgramSection = () => {
         {
           time: '13:10 - 16:00',
           title: 'Protagonismo Feminino: A melhor versão do seu negócio',
-          speaker: 'Sebrae',
+          speaker: 'Palestrantes do Sebrae',
           speakerInfo: '',
           icon: '',
-          location: 'Auditório - Fatec Tatuí',
+          location: 'Auditório 1',
           image: 'schedule/21/13.jpg',
         },
       ],
