@@ -74,4 +74,12 @@
   .tech-card {
     @apply bg-white rounded-xl shadow-md border border-slate-200 hover:shadow-xl transition-shadow duration-300;
   }
+  
+  .perfil {
+    @apply bg-white rounded-xl shadow-md border border-slate-200 hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .evento {
+    @apply rounded-2xl;
+  }
 }
