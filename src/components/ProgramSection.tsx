@@ -1,17 +1,25 @@
-import { Calendar, Clock, MapPin, Speaker, User, Link, Copy } from 'lucide-react'
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Speaker,
+  User,
+  Link,
+  Copy,
+} from 'lucide-react'
 import { useState } from 'react'
 
 const ProgramSection = () => {
   const [selectedDay, setSelectedDay] = useState('segunda')
   const [copiedId, setCopiedId] = useState('')
 
-  const copyEventLink = async (eventId) => {
+  const copyEventLink = async eventId => {
     try {
       const currentUrl = window.location.href.split('#')[0] // Remove any existing hash
       const eventUrl = `${currentUrl}#${eventId}`
       await navigator.clipboard.writeText(eventUrl)
       setCopiedId(eventId)
-      
+
       // Reset the copied state after 2 seconds
       setTimeout(() => {
         setCopiedId('')
@@ -26,12 +34,11 @@ const ProgramSection = () => {
       date: 'Segunda-feira - 20/10',
       activities: [
         {
-          id: 'segunda-info',
-          time: '',
-          title: 'Em breve mais informações',
-          speaker: '',
+          time: '13:00 - 17:00',
+          title: 'Ideathon, Startups e Inovação',
+          speaker: 'Point Media',
           speakerInfo: '',
-          location: '',
+          location: 'Auditório 1',
           image: '',
         },
       ],
@@ -40,14 +47,40 @@ const ProgramSection = () => {
       date: 'Terça-feira - 21/10',
       activities: [
         {
-          id: 'protagonismo-feminino-sebrae',
-          time: '13:10 - 16:00',
+          time: '13:00 - 17:00',
           title: 'Protagonismo Feminino: A melhor versão do seu negócio',
-          speaker: 'Palestrantes do Sebrae',
+          speaker: 'Sebrae',
           speakerInfo: '',
           icon: '',
           location: 'Auditório 1',
           image: 'schedule/21/13.jpg',
+        },
+        // {
+        //   time: '14:30 - 15:30',
+        //   title: 'Em definição',
+        //   speaker: 'Grupo BT',
+        //   speakerInfo: '',
+        //   icon: '',
+        //   location: 'Auditório 1',
+        //   image: '',
+        // },
+        {
+          time: '16:00 - 17:30',
+          title: 'Curso Oratória "O Corpo Fala"',
+          speaker: 'Luís Felipe',
+          speakerInfo: '',
+          icon: '',
+          location: 'Auditório 1',
+          image: '',
+        },
+        {
+          time: '19:30 - 21:00',
+          title: 'As mudanças tecnológicas e a novas oportunidades no mercado de trabalho',
+          speaker: 'Professor Geraldo Cesar Almeida',
+          speakerInfo: '',
+          icon: '',
+          location: 'Auditório 1',
+          image: '',
         },
       ],
     },
@@ -55,7 +88,6 @@ const ProgramSection = () => {
       date: 'Quarta-feira - 22/10',
       activities: [
         {
-          id: 'quarta-info',
           time: '-',
           title: 'Em breve mais informações',
           speaker: '',
@@ -69,7 +101,6 @@ const ProgramSection = () => {
       date: 'Quinta-feira - 23/10',
       activities: [
         {
-          id: 'quinta-info',
           time: '-',
           title: 'Em breve mais informações',
           speaker: '',
@@ -83,7 +114,6 @@ const ProgramSection = () => {
       date: 'Sexta-feira - 24/10',
       activities: [
         {
-          id: 'sexta-info',
           time: '-',
           title: 'Em breve mais informações',
           speaker: '',
@@ -189,29 +219,6 @@ const ProgramSection = () => {
                       ) : (
                         <p> </p>
                       )}
-                      
-                      {/* Botão para copiar link */}
-                      <button
-                        type="button"
-                        onClick={() => copyEventLink(activity.id)}
-                        className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                          copiedId === activity.id
-                            ? 'bg-green-100 text-green-700 border border-green-300'
-                            : 'bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100'
-                        }`}
-                      >
-                        {copiedId === activity.id ? (
-                          <>
-                            <Copy className="w-4 h-4 mr-2" />
-                            Link Copiado!
-                          </>
-                        ) : (
-                          <>
-                            <Link className="w-4 h-4 mr-2" />
-                            Copiar Link
-                          </>
-                        )}
-                      </button>
                     </div>
 
                     {/* <div className="lg:col-span-1">
@@ -241,29 +248,6 @@ const ProgramSection = () => {
                       A programação deste período será divulgada em breve. Fique
                       atento às nossas redes sociais para novidades!
                     </p>
-                    
-                    {/* Botão para copiar link */}
-                    <button
-                      type="button"
-                      onClick={() => copyEventLink(activity.id)}
-                      className={`flex items-center justify-center mx-auto px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                        copiedId === activity.id
-                          ? 'bg-green-100 text-green-700 border border-green-300'
-                          : 'bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100'
-                      }`}
-                    >
-                      {copiedId === activity.id ? (
-                        <>
-                          <Copy className="w-4 h-4 mr-2" />
-                          Link Copiado!
-                        </>
-                      ) : (
-                        <>
-                          <Link className="w-4 h-4 mr-2" />
-                          Copiar Link
-                        </>
-                      )}
-                    </button>
                   </div>
                 )}
               </div>
