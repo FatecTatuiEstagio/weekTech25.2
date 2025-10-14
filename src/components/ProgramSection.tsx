@@ -87,7 +87,7 @@ const ProgramSection = () => {
           speakerInfo: '',
           icon: '',
           location: 'Auditório 2 - Prédio 2',
-          images: [{image: '/public/logo/company/paulanery.jpg'}],
+          images: [{image: '/logo/company/paulanery.jpg'}],
         },
         {
           time: '19:30 - 21:00',
@@ -96,7 +96,7 @@ const ProgramSection = () => {
           speakerInfo: 'Economista, Professor Universitário',
           icon: '',
           location: 'Auditório 1 - Prédio 2',
-          images: [{image: '/public/logo/company/geraldoalmeida.jpg'}],
+          images: [{image: '/logo/company/geraldoalmeida.jpg'}],
         },
       ],
     },
