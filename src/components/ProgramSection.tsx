@@ -34,12 +34,37 @@ const ProgramSection = () => {
       date: 'Segunda-feira - 20/10',
       activities: [
         {
+          time: '8:00',
+          title: 'Ideathon, Startups e Inovação',
+          speaker: 'Point Media e Câmara Municipal de Tatuí',
+          speakerInfo: 'Com o curso de GTI',
+          location: 'Auditório 1 - Prédio 2',
+          images: [
+            {w: '20', image: '/logo/company/pointmedia.png'},
+            {w: '20', image: '/logo/company/camaratatui.png'},
+          ],
+        },
+        {
           time: '13:00 - 17:00',
           title: 'Ideathon, Startups e Inovação',
-          speaker: 'Point Media',
-          speakerInfo: '',
-          location: 'Auditório 1',
-          image: '',
+          speaker: 'Point Media e Câmara Municipal de Tatuí',
+          speakerInfo: 'Com o curso de ADS',
+          location: 'Auditório 1 - Prédio 2',
+          images: [
+            {w: '20', image: '/logo/company/pointmedia.png'},
+            {w: '20', image: '/logo/company/camaratatui.png'},
+          ],
+        },
+        {
+          time: '19:00',
+          title: 'Ideathon, Startups e Inovação',
+          speaker: 'Point Media e Câmara Municipal de Tatuí',
+          speakerInfo: 'Com o curso de GTI',
+          location: 'Auditório 1 - Prédio 2',
+          images: [
+            {w: '20', image: '/logo/company/pointmedia.png'},
+            {w: '20', image: '/logo/company/camaratatui.png'},
+          ],
         },
       ],
     },
@@ -53,47 +78,25 @@ const ProgramSection = () => {
           speakerInfo: '',
           icon: '',
           location: 'Auditório 1',
-          image: 'schedule/21/13.jpg',
+          images: [{w: '60', image: 'schedule/21/13.jpg',}]
         },
-        // {
-        //   time: '14:30 - 15:30',
-        //   title: 'Em definição',
-        //   speaker: 'Grupo BT',
-        //   speakerInfo: '',
-        //   icon: '',
-        //   location: 'Auditório 1',
-        //   image: '',
-        // },
         {
-          time: '16:00 - 17:30',
-          title: 'Curso Oratória "O Corpo Fala"',
-          speaker: 'Luís Felipe',
+          time: '14:30 às 15:30',
+          title: 'Orientações para Processos de Recrutamento e Seleção',
+          speaker: 'Paula Nery - Grupo BT',
           speakerInfo: '',
           icon: '',
-          location: 'Auditório 1',
-          image: '',
+          location: 'Auditório 2 - Prédio 2',
+          images: [{image: '/public/logo/company/paulanery.jpg'}],
         },
         {
           time: '19:30 - 21:00',
           title: 'As mudanças tecnológicas e a novas oportunidades no mercado de trabalho',
           speaker: 'Professor Geraldo Cesar Almeida',
-          speakerInfo: '',
+          speakerInfo: 'Economista, Professor Universitário',
           icon: '',
-          location: 'Auditório 1',
-          image: '',
-        },
-      ],
-    },
-    quarta: {
-      date: 'Quarta-feira - 22/10',
-      activities: [
-        {
-          time: '-',
-          title: 'Em breve mais informações',
-          speaker: '',
-          speakerInfo: '',
-          location: '',
-          image: '',
+          location: 'Auditório 1 - Prédio 2',
+          images: [{image: '/public/logo/company/geraldoalmeida.jpg'}],
         },
       ],
     },
@@ -101,12 +104,12 @@ const ProgramSection = () => {
       date: 'Quinta-feira - 23/10',
       activities: [
         {
-          time: '-',
-          title: 'Em breve mais informações',
-          speaker: '',
+          time: 'Manha e Noite',
+          title: 'Mesa redonda: Batalha de Robôs como Instrumento de Curricularização da Extensão',
+          speaker: 'Automação Industrial e Manuntenção Industrial',
           speakerInfo: '',
-          location: '',
-          image: '',
+          location: 'Auditório 1 - Prédio 2',
+          images: [{image: ''}],
         },
       ],
     },
@@ -114,12 +117,12 @@ const ProgramSection = () => {
       date: 'Sexta-feira - 24/10',
       activities: [
         {
-          time: '-',
-          title: 'Em breve mais informações',
+          time: '',
+          title: '',
           speaker: '',
           speakerInfo: '',
           location: '',
-          image: '',
+          images: [{image: ''}],
         },
       ],
     },
@@ -226,15 +229,30 @@ const ProgramSection = () => {
                          <User className="w-8 h-8 text-slate-400" /> 
                       </div>
                     </div> */}
-                    {activity.image ? (
-                      <img
-                        className="w-60 evento mx-auto lg:mx-0"
-                        src={activity.image}
-                        alt="imagem do evento"
-                      />
-                    ) : (
-                      <p> </p>
-                    )}
+                    <div className='p-2 flex '>
+                      {activity.image ? (
+                        <img
+                          className="w-60 evento mx-auto lg:mx-0"
+                          src={activity.image}
+                          alt="imagem do evento"
+                        />
+                      ) : (
+                        <p> </p>
+                      )}
+
+                      {activity.images.map((img, index) => 
+                        img.image ? (
+                          <img
+                            key={index.toString()}
+                            className={`w-${img.w} p-1 evento mx-auto lg:mx-0`}
+                            src={img.image}
+                            alt="imagem do evento"
+                          />
+                        ) : (
+                          <p key={index.toString()}> </p>
+                        )
+                      )}
+                    </div>
                   </div>
                 ) : (
                   <div className="text-center py-8">
