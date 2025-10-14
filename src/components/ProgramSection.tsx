@@ -131,7 +131,7 @@ const ProgramSection = () => {
   const days = [
     { key: 'segunda', label: 'Segunda' },
     { key: 'terca', label: 'Terça' },
-    { key: 'quarta', label: 'Quarta' },
+    // { key: 'quarta', label: 'Quarta' },
     { key: 'quinta', label: 'Quinta' },
     { key: 'sexta', label: 'Sexta' },
   ]
