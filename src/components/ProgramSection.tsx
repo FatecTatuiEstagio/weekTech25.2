@@ -283,6 +283,37 @@ const ProgramSection = () => {
             ))}
           </div>
         </div>
+
+        <div className="max-w-4xl mx-auto mt-16">
+          <div className="tech-card p-8 text-center">
+            <h3 className="text-3xl font-bold text-slate-900 mb-6">
+              <span className="tech-text-gradient">Monitoramento da Trabalhabilidade e do Empreendedorismo</span>
+            </h3>
+            <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+              Participe da nossa pesquisa e contribua para o desenvolvimento acadêmico e profissional
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://forms.office.com/pages/responsepage.aspx?id=xWS-6vVodkqDAZV3pnnkSaRawpGWC41GlQ82MEFked5UMjMzMlVNN1FaTjBIMzNGWDQ1WFVUTDdVUy4u&origin=QRCode&route=shorturl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
+              >
+                <User className="w-5 h-5 inline-block mr-2" />
+                Aluno
+              </a>
+              <a
+                href="https://forms.office.com/pages/responsepage.aspx?id=xWS-6vVodkqDAZV3pnnkSaRawpGWC41GlQ82MEFked5UNDdYQVFYMUcxOE1OVDBWMkxSM1Q3SVVRUy4u&origin=QRCode&route=shorturl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
+              >
+                <User className="w-5 h-5 inline-block mr-2" />
+                Egresso
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
