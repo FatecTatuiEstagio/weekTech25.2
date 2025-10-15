@@ -251,11 +251,11 @@ const ProgramSection = () => {
                         <p> </p>
                       )}
 
-                      {activity.images.map((img, index) => 
+                      {activity.images.map((img, index) =>
                         img.image ? (
                           <img
                             key={index.toString()}
-                            className={`w-${img.w} p-1 evento mx-auto lg:mx-0`}
+                            className={`w-${img.w} h-${img.w} p-1 evento mx-auto lg:mx-0`}
                             src={img.image}
                             alt="imagem do evento"
                           />
