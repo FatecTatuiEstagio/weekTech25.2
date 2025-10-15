@@ -78,7 +78,7 @@ const ProgramSection = () => {
           speakerInfo: '',
           icon: '',
           location: 'Auditório 1',
-          images: [{w: '60', image: 'schedule/21/13.jpg',}]
+          images: [{w: '60', image: '/logo/company/protagonismo.png',}]
         },
         {
           time: '14:30 às 15:30',
@@ -104,12 +104,20 @@ const ProgramSection = () => {
       date: 'Quinta-feira - 23/10',
       activities: [
         {
-          time: 'Manha e Noite',
+          time: 'Manhã e Noite',
           title: 'Mesa redonda: Batalha de Robôs como Instrumento de Curricularização da Extensão',
           speaker: 'Automação Industrial e Manuntenção Industrial',
           speakerInfo: '',
           location: 'Auditório 1 - Prédio 2',
-          images: [{image: ''}],
+          images: [{image: '/logo/company/battleRobot.jpg'}],
+        },
+        {
+          time: 'Manhã e Noite',
+          title: 'Batalha de robôs',
+          speaker: 'Automação Industrial e Manuntenção Industrial',
+          speakerInfo: '',
+          location: 'Área de Convivência - Prédio 2',
+          images: [{image: '/logo/company/battleRobot.jpg'}],
         },
       ],
     },
@@ -117,12 +125,15 @@ const ProgramSection = () => {
       date: 'Sexta-feira - 24/10',
       activities: [
         {
-          time: '',
-          title: '',
-          speaker: '',
+          time: '14:00',
+          title: 'Bate Papo com Egresso',
+          speaker: 'Dani Mariano e Natália Ferlin',
           speakerInfo: '',
-          location: '',
-          images: [{image: ''}],
+          location: 'Estúdio - Prédio 1',
+          images: [
+            {w: '20', image: '/logo/company/dani.jpg'},
+            {w: '20', image: '/logo/company/natalia.jpg'}
+          ],
         },
       ],
     },
