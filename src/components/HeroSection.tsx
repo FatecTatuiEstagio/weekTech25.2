@@ -1,7 +1,3 @@
-
-import React from 'react';
-import { Calendar } from 'lucide-react';
-
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -29,7 +25,7 @@ const HeroSection = () => {
             <span className="text-sm font-medium">Outubro 2025</span>
           </div> */}
           <p className='text-white lg:text-5xl text-2xl font-bold'>
-              Em Breve 
+              20 a 24
               <span className='text-white font-bold'> em Outubro</span>
           </p>
           
@@ -59,22 +55,6 @@ const HeroSection = () => {
             Sobre o Evento
           </button>
         </div>
-
-        {/* Estatísticas do evento */}
-        {/* <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-white mb-2">5</div>
-            <div className="text-blue-200">Dias de Evento</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-white mb-2">20+</div>
-            <div className="text-blue-200">Palestrantes</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-white mb-2">500+</div>
-            <div className="text-blue-200">Participantes</div>
-          </div>
-        </div> */}
       </div>
 
       {/* Elemento decorativo */}
