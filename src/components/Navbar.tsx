@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-b-zinc-500/30 rounded-b-lg border-slate-200'>
+    <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-b-zinc-500 border-slate-200'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-20'>
           {/* Logos */}
@@ -23,8 +23,9 @@ const Navbar = () => {
               {/* <div className='w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center'>
                 <span className='text-white font-bold text-lg'>ST</span>
               </div> */}
-              <div className='w-60'>
-                <img src="/logo/logoSemanaTech.png" alt="" />
+              <div >
+                <h1 className='text-xl font-bold text-slate-900'>Semana de Tecnologia</h1>
+                <p className='text-sm text-slate-600'>Fatec Tatuí</p>
               </div>
             </div>
             
@@ -45,31 +46,31 @@ const Navbar = () => {
           <div className='hidden md:flex items-center space-x-8'>
             <button
               onClick={() => scrollToSection('inicio')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
+              className='text-slate-700 hover:text-blue-600 transition-colors duration-200'
             >
               Início
             </button>
             <button
               onClick={() => scrollToSection('sobre')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
+              className='text-slate-700 hover:text-blue-600 transition-colors duration-200'
             >
               Sobre o Evento
             </button>
             <button
               onClick={() => scrollToSection('programacao')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
+              className='text-slate-700 hover:text-blue-600 transition-colors duration-200'
             >
               Programação
             </button>
             <button
               onClick={() => scrollToSection('edicoes-anteriores')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
+              className='text-slate-700 hover:text-blue-600 transition-colors duration-200'
             >
               Edições Anteriores
             </button>
             <button
               onClick={() => scrollToSection('contato')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
+              className='text-slate-700 hover:text-blue-600 transition-colors duration-200'
             >
               Contato
             </button>
@@ -94,31 +95,31 @@ const Navbar = () => {
             <div className='flex flex-col space-y-3 pt-4'>
               <button
                 onClick={() => scrollToSection('inicio')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
+                className='text-slate-700 hover:text-blue-600 text-left py-2'
               >
                 Início
               </button>
               <button
                 onClick={() => scrollToSection('sobre')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
+                className='text-slate-700 hover:text-blue-600 text-left py-2'
               >
                 Sobre o Evento
               </button>
               <button
                 onClick={() => scrollToSection('programacao')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
+                className='text-slate-700 hover:text-blue-600 text-left py-2'
               >
                 Programação
               </button>
               <button
                 onClick={() => scrollToSection('edicoes-anteriores')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
+                className='text-slate-700 hover:text-blue-600 text-left py-2'
               >
                 Edições Anteriores
               </button>
               <button
                 onClick={() => scrollToSection('contato')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
+                className='text-slate-700 hover:text-blue-600 text-left py-2'
               >
                 Contato
               </button>

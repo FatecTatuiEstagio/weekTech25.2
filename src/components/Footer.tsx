@@ -12,8 +12,9 @@ const Footer = () => {
               {/* <div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center'>
                 <span className='text-white font-bold text-lg'>ST</span>
               </div> */}
-              <div className='w-56'>
-                <img src="/logo/logoSemanaTech.png" alt="" />
+              <div>
+                <h3 className='text-xl font-bold'>Semana de Tecnologia</h3>
+                <p className='text-slate-300'>Fatec Tatuí</p>
               </div>
             </div>
             
@@ -39,7 +40,7 @@ const Footer = () => {
             <h4 className='text-lg font-semibold mb-6'>Contato</h4>
             <div className='space-y-4'>
               <div className='flex items-start space-x-3'>
-                <MapPin className='w-5 h-5 text-[#E100FF] mt-1 flex-shrink-0' />
+                <MapPin className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
                 <div>
                   <p className='text-slate-300'>
                     Fatec Tatuí<br />
@@ -51,7 +52,7 @@ const Footer = () => {
               </div>
               
               <div className='flex items-center space-x-3'>
-                <Phone className='w-5 h-5 text-[#E100FF]' />
+                <Phone className='w-5 h-5 text-blue-400' />
                 <span className='text-slate-300'>(15) 3205-7782</span>
               </div>
             </div>
@@ -64,7 +65,7 @@ const Footer = () => {
               <a 
                 href='https://www.instagram.com/fatectatui'
                 target='_blank'
-                className='flex items-center space-x-3 text-slate-300 hover:text-[#E100FF] transition-colors duration-200'
+                className='flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors duration-200'
               >
                 <Instagram className='w-5 h-5' />
                 <span>@fatectatui</span>
@@ -73,7 +74,7 @@ const Footer = () => {
               <a 
                 href='https://www.facebook.com/fatectatui' 
                 target='_blank'
-                className='flex items-center space-x-3 text-slate-300 hover:text-[#E100FF] transition-colors duration-200'
+                className='flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors duration-200'
               >
                 <Facebook className='w-5 h-5' />
                 <span>Fatec Tatuí</span>
@@ -83,13 +84,13 @@ const Footer = () => {
             <div className='mt-8'>
               <h5 className='font-semibold mb-3'>Links Úteis</h5>
               <div className='space-y-2'>
-                <a target='_blank' href='https://www.fatectatui.edu.br/site4/portalAluno.php' className='block text-slate-300 hover:text-[#E100FF] transition-colors duration-200'>
+                <a target='_blank' href='https://www.fatectatui.edu.br/site4/portalAluno.php' className='block text-slate-300 hover:text-blue-400 transition-colors duration-200'>
                   Portal Fatec
                 </a>
-                <a target='_blank' href='https://www.cps.sp.gov.br/' className='block text-slate-300 hover:text-[#E100FF] transition-colors duration-200'>
+                <a target='_blank' href='https://www.cps.sp.gov.br/' className='block text-slate-300 hover:text-blue-400 transition-colors duration-200'>
                   Centro Paula Souza
                 </a>
-                <a target='_blank' href='https://vestibular.fatec.sp.gov.br/home/' className='block text-slate-300 hover:text-[#E100FF] transition-colors duration-200'>
+                <a target='_blank' href='https://vestibular.fatec.sp.gov.br/home/' className='block text-slate-300 hover:text-blue-400 transition-colors duration-200'>
                   Vestibular
                 </a>
               </div>
