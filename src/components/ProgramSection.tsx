@@ -2,10 +2,7 @@ import {
   Calendar,
   Clock,
   MapPin,
-  Speaker,
   User,
-  Link,
-  Copy,
 } from 'lucide-react'
 import { useState } from 'react'
 
