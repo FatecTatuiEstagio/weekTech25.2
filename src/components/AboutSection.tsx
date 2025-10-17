@@ -1,5 +1,5 @@
 
-
+import React from 'react';
 import { Users, Target, Award, Network } from 'lucide-react';
 
 const AboutSection = () => {
