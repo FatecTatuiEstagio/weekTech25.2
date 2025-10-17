@@ -93,8 +93,8 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="tech-card p-6 text-center tech-hover-effect">
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center">
-                <feature.icon className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#F5F3FA] rounded-lg flex items-center justify-center">
+                <feature.icon className="w-8 h-8 text-[#6A0DAD]" />
               </div>
               <h4 className="text-xl font-semibold text-slate-900 mb-3">{feature.title}</h4>
               <p className="text-slate-600 leading-relaxed">{feature.description}</p>

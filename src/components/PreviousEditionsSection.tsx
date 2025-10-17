@@ -58,7 +58,7 @@ const PreviousEditionsSection = () => {
                   <h3 className="text-xl font-bold text-slate-900">
                     {edition.title}
                   </h3>
-                  <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+                  <span className="text-sm font-semibold text-[#6A0DAD] bg-[#F5F3FA] px-3 py-1 rounded-full">
                     {edition.year}
                   </span>
                 </div>
@@ -71,28 +71,6 @@ const PreviousEditionsSection = () => {
           ))}
         </div>
 
-        {/* Call to action */}
-        <div className="text-center mt-16">
-          <div className="tech-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              Faça Parte da História
-            </h3>
-            <p className="text-slate-600 mb-6">
-              Junte-se a nós na edição 2025 e ajude a construir mais um capítulo
-              da história da Semana de Tecnologia da Fatec Tatuí.
-            </p>
-            <button
-              type="submit"
-              onClick={() => {
-                const element = document.getElementById('programacao')
-                if (element) element.scrollIntoView({ behavior: 'smooth' })
-              }}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200"
-            >
-              Ver Programação 2025
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   )
