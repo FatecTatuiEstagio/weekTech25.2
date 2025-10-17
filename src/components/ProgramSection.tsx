@@ -87,7 +87,7 @@ const ProgramSection = () => {
           speakerInfo: '',
           icon: '',
           location: 'Auditório 2 - Prédio 2',
-          images: [{image: '/logo/company/'}],
+          images: [{image: '/logo/company/slavov.jpeg'}],
         },
         {
           time: '19:30 - 21:00',
