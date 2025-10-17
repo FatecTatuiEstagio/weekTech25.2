@@ -8,24 +8,24 @@
 @layer base {
   :root {
     /* Cores principais do evento */
-    --tech-primary: 14 165 233; /* blue-500 */
-    --tech-primary-dark: 30 58 138; /* blue-900 */
-    --tech-secondary: 34 197 94; /* green-500 */
-    --tech-accent: 251 146 60; /* orange-400 */
+    --tech-primary: 106 13 173; /* #6A0DAD - Roxo Tecnológico */
+    --tech-primary-dark: 30 30 63; /* #1E1E3F - Azul Noturno */
+    --tech-secondary: 30 30 63; /* #1E1E3F - Azul Noturno */
+    --tech-accent: 225 0 255; /* #E100FF - Magenta Elétrico */
     
     /* Cores de fundo */
-    --tech-bg-primary: 248 250 252; /* slate-50 */
-    --tech-bg-secondary: 241 245 249; /* slate-100 */
-    --tech-bg-dark: 15 23 42; /* slate-900 */
+    --tech-bg-primary: 245 243 250; /* #F5F3FA - Cinza Lavanda */
+    --tech-bg-secondary: 240 238 247; /* Cinza Lavanda mais escuro */
+    --tech-bg-dark: 30 30 63; /* #1E1E3F - Azul Noturno */
     
     /* Cores de texto */
-    --tech-text-primary: 15 23 42; /* slate-900 */
-    --tech-text-secondary: 71 85 105; /* slate-600 */
+    --tech-text-primary: 46 46 46; /* #2E2E2E - Cinza Grafite */
+    --tech-text-secondary: 80 80 80; /* Cinza Grafite mais claro */
     --tech-text-light: 255 255 255; /* white */
     
     /* Cores de destaque e hover */
-    --tech-hover: 59 130 246; /* blue-500 */
-    --tech-border: 226 232 240; /* slate-200 */
+    --tech-hover: 225 0 255; /* #E100FF - Magenta Elétrico */
+    --tech-border: 230 228 240; /* Borda suave baseada no fundo */
 
     /* Shadcn variables */
     --background: 0 0% 100%;
@@ -51,7 +51,9 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply antialiased;
+    background-color: rgb(var(--tech-bg-primary));
+    color: rgb(var(--tech-text-primary));
   }
 }
 
