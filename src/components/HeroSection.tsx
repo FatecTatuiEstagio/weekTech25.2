@@ -31,10 +31,10 @@ const HeroSection = () => {
           
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Semana de
-            <span className="block text-green-400">Tecnologia</span>
+            <span className="block text-[#E100FF]">Tecnologia</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Evento de tecnologia e inovação da Fatec Tatuí. 
             Conectando estudantes, profissionais e empresas em uma semana de aprendizado e networking.
           </p>
@@ -43,7 +43,7 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={() => scrollToSection('programacao')}
-            className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="px-8 py-4 bg-[#E100FF] text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Veja a Programação
           </button>
