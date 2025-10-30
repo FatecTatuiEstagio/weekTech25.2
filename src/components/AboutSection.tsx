@@ -1,5 +1,3 @@
-
-
 import { Users, Target, Award, Network } from 'lucide-react';
 
 const AboutSection = () => {
@@ -38,56 +36,6 @@ const AboutSection = () => {
             profissionais e empresas para discutir as últimas tendências em tecnologia, 
             inovação e desenvolvimento profissional.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">
-              Organizado pela Fatec Tatuí e Centro Paula Souza
-            </h3>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              Nossa semana de tecnologia é cuidadosamente planejada para oferecer uma experiência 
-              completa de aprendizado e networking. Com palestras, workshops e atividades práticas, 
-              proporcionamos um ambiente rico para o desenvolvimento profissional e pessoal.
-            </p>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              O evento é uma iniciativa da Fatec Tatuí, mantida pelo Centro Paula Souza, 
-              com o objetivo de aproximar o ambiente acadêmico do mercado de trabalho, 
-              criando pontes para o futuro da tecnologia.
-            </p>
-            <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">FATEC</span>
-              </div>
-              <div className="w-16 h-16 bg-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CPS</span>
-              </div>
-            </div>
-          </div> */}
-          
-          {/* <div className="relative">
-            <div className="tech-card p-8">
-              <h4 className="text-xl font-bold text-slate-900 mb-4">Público-Alvo</h4>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Estudantes de tecnologia e áreas afins
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Profissionais da área de TI
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Empresários e gestores
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Entusiastas da tecnologia
-                </li>
-              </ul>
-            </div>
-          </div> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
