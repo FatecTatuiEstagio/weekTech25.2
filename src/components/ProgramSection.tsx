@@ -2,10 +2,7 @@ import {
   Calendar,
   Clock,
   MapPin,
-  Speaker,
   User,
-  Link,
-  Copy,
 } from 'lucide-react'
 import { useState } from 'react'
 
@@ -82,12 +79,12 @@ const ProgramSection = () => {
         },
         {
           time: '14:30 às 15:30',
-          title: 'Orientações para Processos de Recrutamento e Seleção',
-          speaker: 'Paula Nery - Grupo BT',
+          title: 'Copilot em ação: Inteligência Artificial como parceria na Inovação e Produtividade',
+          speaker: 'Prof. Dr. Ricardo Slavov',
           speakerInfo: '',
           icon: '',
           location: 'Auditório 2 - Prédio 2',
-          images: [{image: '/logo/company/paulanery.jpg'}],
+          images: [{image: '/logo/company/slavov.jpeg'}],
         },
         {
           time: '19:30 - 21:00',
@@ -170,8 +167,8 @@ const ProgramSection = () => {
               onClick={() => setSelectedDay(day.key)}
               className={`px-4 py-3 rounded-md font-medium transition-all duration-200 ${
                 selectedDay === day.key
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-slate-600 hover:text-blue-600 hover:bg-blue-50'
+                  ? 'bg-[#6A0DAD] text-white shadow-md'
+                  : 'text-slate-600 hover:text-[#E100FF] hover:bg-[#F5F3FA]'
               }`}
             >
               {day.label}
@@ -183,7 +180,7 @@ const ProgramSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center">
-              <Calendar className="w-6 h-6 mr-3 text-blue-600" />
+              <Calendar className="w-6 h-6 mr-3 text-[#6A0DAD]" />
               {programData[selectedDay].date}
             </h3>
           </div>
@@ -198,7 +195,7 @@ const ProgramSection = () => {
                 {activity.speaker ? (
                   <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
                     <div className="lg:col-span-1">
-                      <div className="flex items-center text-blue-600 mb-2">
+                      <div className="flex items-center text-[#6A0DAD] mb-2">
                         <Clock className="w-4 h-4 mr-2" />
                         <span className="font-semibold">{activity.time}</span>
                       </div>
@@ -297,7 +294,7 @@ const ProgramSection = () => {
                 href="https://forms.office.com/pages/responsepage.aspx?id=xWS-6vVodkqDAZV3pnnkSaRawpGWC41GlQ82MEFked5UMjMzMlVNN1FaTjBIMzNGWDQ1WFVUTDdVUy4u&origin=QRCode&route=shorturl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
+                className="bg-[#6A0DAD] hover:bg-[#5A0D9D] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
               >
                 <User className="w-5 h-5 inline-block mr-2" />
                 Aluno
@@ -306,7 +303,7 @@ const ProgramSection = () => {
                 href="https://forms.office.com/pages/responsepage.aspx?id=xWS-6vVodkqDAZV3pnnkSaRawpGWC41GlQ82MEFked5UNDdYQVFYMUcxOE1OVDBWMkxSM1Q3SVVRUy4u&origin=QRCode&route=shorturl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
+                className="bg-[#E100FF] hover:bg-[#D100EF] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
               >
                 <User className="w-5 h-5 inline-block mr-2" />
                 Egresso
