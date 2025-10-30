@@ -69,6 +69,7 @@ const images = [
   },
 ]
 
+
 export function GalleryCarousel() {
   return (
     <section className="flex flex-col items-center justify-center w-full mx-auto bg-gray-100 py-8 px-4 md:px-8">
