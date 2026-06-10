@@ -1,53 +1,65 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Design system customizável para Semana de Tecnologia */
-
 @layer base {
   :root {
-    /* Cores principais do evento */
-    --tech-primary: 106 13 173; /* #6A0DAD - Roxo Tecnológico */
-    --tech-primary-dark: 30 30 63; /* #1E1E3F - Azul Noturno */
-    --tech-secondary: 30 30 63; /* #1E1E3F - Azul Noturno */
-    --tech-accent: 225 0 255; /* #E100FF - Magenta Elétrico */
-    
-    /* Cores de fundo */
-    --tech-bg-primary: 245 243 250; /* #F5F3FA - Cinza Lavanda */
-    --tech-bg-secondary: 240 238 247; /* Cinza Lavanda mais escuro */
-    --tech-bg-dark: 30 30 63; /* #1E1E3F - Azul Noturno */
-    
-    /* Cores de texto */
-    --tech-text-primary: 46 46 46; /* #2E2E2E - Cinza Grafite */
-    --tech-text-secondary: 80 80 80; /* Cinza Grafite mais claro */
-    --tech-text-light: 255 255 255; /* white */
-    
-    /* Cores de destaque e hover */
-    --tech-hover: 225 0 255; /* #E100FF - Magenta Elétrico */
-    --tech-border: 230 228 240; /* Borda suave baseada no fundo */
+    /* ==========================
+       Paleta principal
+    ========================== */
 
-    /* Shadcn variables */
+    /* Vermelho institucional */
+    --tech-primary: 178 0 0; /* #b20000 */
+    --tech-primary-dark: 125 0 0; /* vermelho mais escuro */
+    --tech-secondary: 220 38 38; /* vermelho de apoio */
+
+    /* Destaque */
+    --tech-accent: 178 0 0;
+
+    /* Fundos */
+    --tech-bg-primary: 255 255 255;
+    --tech-bg-secondary: 248 248 248;
+    --tech-bg-dark: 24 24 27;
+
+    /* Texto */
+    --tech-text-primary: 23 23 23;
+    --tech-text-secondary: 82 82 82;
+    --tech-text-light: 255 255 255;
+
+    /* Extras */
+    --tech-hover: 150 0 0;
+    --tech-border: 229 229 229;
+
+    /* shadcn/ui */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 240 10% 4%;
+
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 10% 4%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
+    --popover-foreground: 240 10% 4%;
+
+    --primary: 0 100% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 0 100% 35%;
+
+    --radius: 0.75rem;
   }
 
   body {
@@ -55,33 +67,42 @@
     background-color: rgb(var(--tech-bg-primary));
     color: rgb(var(--tech-text-primary));
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
   .tech-gradient {
-    background: linear-gradient(135deg, rgb(var(--tech-primary-dark)), rgb(var(--tech-primary)));
+    background: linear-gradient(
+      135deg,
+      rgb(var(--tech-primary-dark)),
+      rgb(var(--tech-primary))
+    );
   }
-  
+
   .tech-text-gradient {
-    background: linear-gradient(135deg, rgb(var(--tech-primary)), rgb(var(--tech-secondary)));
+    background: linear-gradient(
+      135deg,
+      rgb(var(--tech-primary-dark)),
+      rgb(var(--tech-primary))
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .tech-hover-effect {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
   }
-  
-  .tech-card {
-    @apply bg-white rounded-xl shadow-md border border-slate-200 hover:shadow-xl transition-shadow duration-300;
-  }
-  
+
+  .tech-card,
   .perfil {
-    @apply bg-white rounded-xl shadow-md border border-slate-200 hover:shadow-xl transition-shadow duration-300;
+    @apply rounded-2xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg;
   }
-  
+
   .evento {
-    @apply rounded-2xl;
+    @apply rounded-3xl;
   }
 }

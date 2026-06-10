@@ -149,7 +149,7 @@ const ProgramSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">
-            <span className="tech-text-gradient">Programação</span> do Evento
+          <span className="text-[#b20000]">Programação</span> do Evento
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Confira a programação completa da Semana de Tecnologia 2025.
@@ -158,7 +158,7 @@ const ProgramSection = () => {
         </div>
 
         {/* Navegação dos dias */}
-        <div className="flex flex-wrap justify-center mb-12 bg-white rounded-lg p-2 shadow-md max-w-2xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-2 mb-12 bg-white rounded-2xl p-3 shadow-lg border border-neutral-200 max-w-2xl mx-auto">
           {days.map(day => (
             <button
               type="button"
@@ -167,8 +167,8 @@ const ProgramSection = () => {
               onClick={() => setSelectedDay(day.key)}
               className={`px-4 py-3 rounded-md font-medium transition-all duration-200 ${
                 selectedDay === day.key
-                  ? 'bg-[#6A0DAD] text-white shadow-md'
-                  : 'text-slate-600 hover:text-[#E100FF] hover:bg-[#F5F3FA]'
+                  ? 'bg-[#b20000] text-white shadow-md'
+                  : 'text-slate-600 hover:text-[#b20000] hover:bg-red-50'
               }`}
             >
               {day.label}
@@ -180,7 +180,7 @@ const ProgramSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center">
-              <Calendar className="w-6 h-6 mr-3 text-[#6A0DAD]" />
+              <Calendar className="w-6 h-6 mr-3 text-[#b20000]" />
               {programData[selectedDay].date}
             </h3>
           </div>
@@ -190,12 +190,12 @@ const ProgramSection = () => {
               <div
                 key={activity.id || index.toString()}
                 id={activity.id}
-                className="max-sm:h-[600px] tech-card p-6"
+                className="tech-card p-6 rounded-3xl hover:-translate-y-1 transition-all duration-300"
               >
                 {activity.speaker ? (
                   <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
                     <div className="lg:col-span-1">
-                      <div className="flex items-center text-[#6A0DAD] mb-2">
+                      <div className="flex items-center text-[#b20000] mb-2">
                         <Clock className="w-4 h-4 mr-2" />
                         <span className="font-semibold">{activity.time}</span>
                       </div>
@@ -240,7 +240,7 @@ const ProgramSection = () => {
                     <div className='p-2 flex '>
                       {activity.image ? (
                         <img
-                          className="w-60 evento mx-auto lg:mx-0"
+                          className="flex flex-wrap items-center justify-center gap-3 p-2"
                           src={activity.image}
                           alt="imagem do evento"
                         />
@@ -294,7 +294,7 @@ const ProgramSection = () => {
                 href="https://forms.office.com/pages/responsepage.aspx?id=xWS-6vVodkqDAZV3pnnkSaRawpGWC41GlQ82MEFked5UMjMzMlVNN1FaTjBIMzNGWDQ1WFVUTDdVUy4u&origin=QRCode&route=shorturl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#6A0DAD] hover:bg-[#5A0D9D] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
+                className="bg-[#b20000] hover:bg-[#8f0000]text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
               >
                 <User className="w-5 h-5 inline-block mr-2" />
                 Aluno
@@ -303,7 +303,7 @@ const ProgramSection = () => {
                 href="https://forms.office.com/pages/responsepage.aspx?id=xWS-6vVodkqDAZV3pnnkSaRawpGWC41GlQ82MEFked5UNDdYQVFYMUcxOE1OVDBWMkxSM1Q3SVVRUy4u&origin=QRCode&route=shorturl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#E100FF] hover:bg-[#D100EF] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
+                className="bg-[#b20000] hover:bg-[#8f0000] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center text-decoration-none"
               >
                 <User className="w-5 h-5 inline-block mr-2" />
                 Egresso

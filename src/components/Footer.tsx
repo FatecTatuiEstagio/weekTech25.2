@@ -1,102 +1,88 @@
 
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from 'lucide-react';
 
+
+import { Link } from 'react-router-dom';
+
+import LogoFatec from "./../../public/logo/logoFatec.png"
+import LogoCps from "./../../public/logo/logo-branco-cps.png"
+
 const Footer = () => {
+
+  const currentYear = new Date().getFullYear();
+
+  const links = [
+    { label: "Início", href: "#inicio" },
+    { label: "Sobre o Evento", href: "#sobre" },
+    { label: "Programação", href: "#programacao" },
+    { label: "Edições Anteriores", href: "#edicoes" },
+  ]
+
   return (
-    <footer id='contato' className='bg-slate-900 text-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          {/* Informações da Instituição */}
-          <div className='lg:col-span-2'>
-            <div className='flex items-center space-x-3 mb-6'>
-              <div className='w-56'>
-                <img src="/logo/logoSemanaTech.png" alt="" />
-              </div>
+    <footer className="bg-foreground text-background py-12">
+    <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid gap-10 md:grid-cols-3 mb-10">
+          {/* Logo + descrição */}
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+              <img
+                src={LogoFatec}
+                alt="Fatec Tatuí"
+                className="h-12 w-auto"
+              />
+              <img
+                src={LogoCps}
+                alt="Centro Paula Souza"
+                className="h-10 w-auto"
+              />
             </div>
-            
-            <p className='text-slate-300 mb-6 leading-relaxed'>
-              A Semana de Tecnologia da Fatec Tatuí é um evento anual que conecta 
-              estudantes, profissionais e empresas, promovendo o conhecimento e 
-              a inovação tecnológica.
+
+            <p className="text-sm text-background/70 leading-relaxed">
+              Faculdade de Tecnologia de Tatuí
+              <br />
+              Centro Paula Souza
             </p>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Links Rápidos</h4>
+            <ul className="space-y-2 text-sm text-background/70">
+              {links.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="hover:text-background transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contato */}
           <div>
-            <h4 className='text-lg font-semibold mb-6'>Contato</h4>
-            <div className='space-y-4'>
-              <div className='flex items-start space-x-3'>
-                <MapPin className='w-5 h-5 text-[#E100FF] mt-1 flex-shrink-0' />
-                <div>
-                  <p className='text-slate-300'>
-                    Fatec Tatuí<br />
-                    Rua Mario Dedini, 97<br />
-                    Centro - Tatuí/SP<br />
-                    CEP: 18270-070
-                  </p>
-                </div>
-              </div>
-              
-              <div className='flex items-center space-x-3'>
-                <Phone className='w-5 h-5 text-[#E100FF]' />
-                <span className='text-slate-300'>(15) 3205-7782</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Redes Sociais e Links */}
-          <div>
-            <h4 className='text-lg font-semibold mb-6'>Siga-nos</h4>
-            <div className='space-y-4'>
-              <a 
-                href='https://www.instagram.com/fatectatui'
-                target='_blank'
-                className='flex items-center space-x-3 text-slate-300 hover:text-[#E100FF] transition-colors duration-200'
-              >
-                <Instagram className='w-5 h-5' />
-                <span>@fatectatui</span>
-              </a>
-              
-              <a 
-                href='https://www.facebook.com/fatectatui' 
-                target='_blank'
-                className='flex items-center space-x-3 text-slate-300 hover:text-[#E100FF] transition-colors duration-200'
-              >
-                <Facebook className='w-5 h-5' />
-                <span>Fatec Tatuí</span>
-              </a>
-            </div>
-
-            <div className='mt-8'>
-              <h5 className='font-semibold mb-3'>Links Úteis</h5>
-              <div className='space-y-2'>
-                <a target='_blank' href='https://www.fatectatui.edu.br/site4/portalAluno.php' className='block text-slate-300 hover:text-[#E100FF] transition-colors duration-200'>
-                  Portal Fatec
-                </a>
-                <a target='_blank' href='https://www.cps.sp.gov.br/' className='block text-slate-300 hover:text-[#E100FF] transition-colors duration-200'>
-                  Centro Paula Souza
-                </a>
-                <a target='_blank' href='https://vestibular.fatec.sp.gov.br/home/' className='block text-slate-300 hover:text-[#E100FF] transition-colors duration-200'>
-                  Vestibular
-                </a>
-              </div>
-            </div>
+            <h4 className="font-semibold mb-4">Contato</h4>
+            <ul className="space-y-2 text-sm text-background/70">
+              <li>Rodovia Mário Batista Mori, 971</li>
+              <li>Tatuí/SP - CEP 18280-000</li>
+              <li>(15) 3205-7782</li>
+              <li>f132.contato@fatec.sp.gov.br</li>
+            </ul>
           </div>
         </div>
 
-        {/* Linha separadora */}
-        <div className='border-t border-slate-700 mt-12 pt-8'>
-          <div className='flex flex-col md:flex-row justify-between items-center'>
-            <p className='text-slate-400 text-sm'>
-              © 2025 Fatec Tatuí - Centro Paula Souza. Todos os direitos reservados.
-            </p>
-            <p className='text-slate-400 text-sm mt-4 md:mt-0'>
-              Desenvolvido para a Semana de Tecnologia 2025
-            </p>
-          </div>
+        {/* Bottom */}
+        <div className="pt-6 border-t border-background/20 text-center text-sm text-background/60">
+          <p>
+            © {currentYear} Fatec Tatuí - Centro Paula Souza. Todos os direitos reservados.
+          </p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   );
 };
 

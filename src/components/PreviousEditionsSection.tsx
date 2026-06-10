@@ -58,7 +58,7 @@ const PreviousEditionsSection = () => {
                   <h3 className="text-xl font-bold text-slate-900">
                     {edition.title}
                   </h3>
-                  <span className="text-sm font-semibold text-[#6A0DAD] bg-[#F5F3FA] px-3 py-1 rounded-full">
+                  <span className="text-sm font-semibold text-[#B20000] bg-[#F5F3FA] px-3 py-1 rounded-full">
                     {edition.year}
                   </span>
                 </div>

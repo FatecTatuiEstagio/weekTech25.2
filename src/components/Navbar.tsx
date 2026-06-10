@@ -1,127 +1,92 @@
-
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
+
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
     }
   };
 
+  const navItems = [
+    { label: "Início", id: "inicio" },
+    { label: "Sobre o Evento", id: "sobre" },
+    { label: "Programação", id: "programacao" },
+    { label: "Edições Anteriores", id: "edicoes-anteriores" },
+    { label: "Contato", id: "contato" },
+  ];
+
   return (
-    <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-b-zinc-500/30 rounded-b-lg border-slate-200'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center h-20'>
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-red-900/20 bg-[#b20000]/95 backdrop-blur-md shadow-lg">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between">
           {/* Logos */}
-          <div className='flex items-center space-x-6'>
-            <div className='flex items-center space-x-3'>
-              {/* <div className='w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center'>
-                <span className='text-white font-bold text-lg'>ST</span>
-              </div> */}
-              <div className='w-60'>
-                <img src="/logo/logoSemanaTech.png" alt="" />
-              </div>
-            </div>
-            
-            {/* Logos institucionais */}
-            <div className='flex gap-5 items-center space-x-4'>
-              <img className='w-16 max-md:w-14' src='/logo/fatec.png' alt='Logo da Fatec Tatuí' />
-              <img className='w-60 max-md:hidden max-md:w-14' src='/logo/cps.png' alt='Logo da Centro Paula Souza' />
-              {/* <div className='w-10 h-10 bg-red-600 rounded flex items-center justify-center'>
-                <span className='text-white font-bold text-sm'>FATEC</span>
-              </div>
-              <div className='w-10 h-10 bg-blue-800 rounded flex items-center justify-center'>
-                <span className='text-white font-bold text-xs'>CPS</span>
-              </div> */}
+          <div className="flex items-center gap-4">
+            <img
+              src="/logo/logoSemanaTech.png"
+              alt="Semana de Tecnologia"
+              className="w-52 lg:w-60"
+            />
+
+            <div className="flex items-center gap-4">
+              <img
+                className="w-12 md:w-14"
+                src="/logo/logoFatec.png"
+                alt="Logo da Fatec Tatuí"
+              />
+
+              <img
+                className="hidden w-52 lg:block"
+                src="/logo/logo-branco-cps.png"
+                alt="Logo do Centro Paula Souza"
+              />
             </div>
           </div>
 
-          {/* Menu Desktop */}
-          <div className='hidden md:flex items-center space-x-8'>
-            <button
-              onClick={() => scrollToSection('inicio')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
-            >
-              Início
-            </button>
-            <button
-              onClick={() => scrollToSection('sobre')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
-            >
-              Sobre o Evento
-            </button>
-            <button
-              onClick={() => scrollToSection('programacao')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
-            >
-              Programação
-            </button>
-            <button
-              onClick={() => scrollToSection('edicoes-anteriores')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
-            >
-              Edições Anteriores
-            </button>
-            <button
-              onClick={() => scrollToSection('contato')}
-              className='text-slate-700 hover:text-[#6A0DAD] transition-colors duration-200'
-            >
-              Contato
-            </button>
+          {/* Desktop */}
+          <div className="hidden items-center gap-8 md:flex">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="relative font-medium text-white transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {item.label}
+              </button>
+            ))}
           </div>
 
-          {/* Botão Menu Mobile */}
+          {/* Mobile Button */}
           <button
-            className='md:hidden'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white md:hidden"
           >
             {isMenuOpen ? (
-              <X className='h-6 w-6 text-slate-700' />
+              <X className="h-7 w-7" />
             ) : (
-              <Menu className='h-6 w-6 text-slate-700' />
+              <Menu className="h-7 w-7" />
             )}
           </button>
         </div>
 
-        {/* Menu Mobile */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className='md:hidden pb-4 border-t border-slate-200 mt-2'>
-            <div className='flex flex-col space-y-3 pt-4'>
-              <button
-                onClick={() => scrollToSection('inicio')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
-              >
-                Início
-              </button>
-              <button
-                onClick={() => scrollToSection('sobre')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
-              >
-                Sobre o Evento
-              </button>
-              <button
-                onClick={() => scrollToSection('programacao')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
-              >
-                Programação
-              </button>
-              <button
-                onClick={() => scrollToSection('edicoes-anteriores')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
-              >
-                Edições Anteriores
-              </button>
-              <button
-                onClick={() => scrollToSection('contato')}
-                className='text-slate-700 hover:text-[#6A0DAD] text-left py-2'
-              >
-                Contato
-              </button>
+          <div className="border-t border-white/20 py-4 md:hidden">
+            <div className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="rounded-lg px-3 py-3 text-left font-medium text-white transition hover:bg-white/10"
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
           </div>
         )}
