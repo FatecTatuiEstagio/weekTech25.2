@@ -32,18 +32,18 @@ const HeroSection = () => {
       {/* Glow */}
       <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
 
-      <div className="relative z-10 mx-4 flex w-[calc(100%-2rem)] max-w-4xl flex-col items-center rounded-3xl border border-white/15 bg-black/10 px-5 py-9 text-center shadow-2xl backdrop-blur-sm sm:mx-6 sm:w-full sm:px-10 sm:py-12">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
         <p className="mb-4 text-3xl font-bold text-white md:text-5xl">
           20 a 24{" "}
           <span className="font-semibold text-red-100">em Outubro</span>
         </p>
 
-        <h1 className="mb-7 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          5ª Semana da
+        <h1 className="mb-8 text-5xl font-bold leading-tight text-white md:text-7xl lg:text-8xl">
+          Semana de
           <span className="mt-2 block text-red-100">Tecnologia</span>
         </h1>
 
-        <p className="mb-8 max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl">
+        <p className="mb-10 max-w-3xl text-lg leading-relaxed text-white/90 md:text-2xl">
           Evento de tecnologia e inovação da Fatec Tatuí. Conectando
           estudantes, profissionais e empresas em uma semana de aprendizado e
           networking.

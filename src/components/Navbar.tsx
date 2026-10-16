@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoFatec from "../Icon_FatecTwentyYears.png";
-import logoGovernoSP from "../Icon_governoSP.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-neutral-950/95 shadow-lg backdrop-blur-md">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-red-900/20 bg-[#b20000]/95 backdrop-blur-md shadow-lg">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logos */}
@@ -32,25 +30,20 @@ const Navbar = () => {
             <img
               src="/logo/logoSemanaTech.png"
               alt="Semana de Tecnologia"
-              className="w-36 sm:w-44 lg:w-52"
+              className="w-52 lg:w-60"
             />
 
             <div className="flex items-center gap-4">
               <img
-                className="h-10 w-auto object-contain md:h-12"
-                src={logoFatec}
-                alt="Fatec Tatuí — 20 anos"
+                className="w-12 md:w-14"
+                src="/logo/logoFatec.png"
+                alt="Logo da Fatec Tatuí"
               />
 
               <img
-                className="hidden h-10 w-auto object-contain lg:block"
-                src={logoGovernoSP}
-                alt="Governo do Estado de São Paulo"
-              />
-              <img
-                className="hidden h-9 w-auto object-contain xl:block"
+                className="hidden w-52 lg:block"
                 src="/logo/logo-branco-cps.png"
-                alt="Centro Paula Souza"
+                alt="Logo do Centro Paula Souza"
               />
             </div>
           </div>
@@ -72,8 +65,6 @@ const Navbar = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white md:hidden"
-            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
               <X className="h-7 w-7" />

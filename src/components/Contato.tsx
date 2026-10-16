@@ -24,11 +24,7 @@ export function ContactSection() {
     {
       icon: Mail,
       title: "E-mail",
-      content: (
-        <a href="mailto:f132.secdir@fatectatui.edu.br" className="text-primary underline-offset-4 hover:underline">
-          f132.secdir@fatectatui.edu.br
-        </a>
-      ),
+      content: "f132.contato@fatec.sp.gov.br",
     },
   ]
 
